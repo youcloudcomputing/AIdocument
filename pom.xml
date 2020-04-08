@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <properties>
+  	<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+	<whitesource.projectToken>52e9673879ee465abecc87340626a97dea5b342a5de24b6aacf83efec7b2caad</whitesource.projectToken>
+	<vulas.ppms.component>SAP LBN 2.0</vulas.ppms.component>
+        <vulas.ppms.objno.scv>73555000100200011747</vulas.ppms.objno.scv>
+	<sharedLIB.version>2.3.8</sharedLIB.version>
+  </properties>
+
+  <parent>
+    <groupId>com.sap.gtt.v2</groupId>
+    <artifactId>gtt-v2-parent-pom</artifactId>
+    <version>[2.3.0,3.0.0)</version>
+  </parent>
+
+  <artifactId>gtt-v2-core-metadata-service</artifactId>
+  <packaging>jar</packaging>
+  <name>gtt-v2-core-metadata-service</name>
+  <version>2.3.0</version>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.sap.gtt.v2</groupId>
+      <artifactId>gtt-v2-shared-library</artifactId>
+      <version>${sharedLIB.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <!-- WhiteSource Scan -->
+      <plugin>
+        <groupId>org.whitesource</groupId>
+        <artifactId>whitesource-maven-plugin</artifactId>
+        <version>19.5.1</version>
+        <configuration>
+          <orgToken>b39d1328-52e2-42e3-98f0-932709daf3f0</orgToken>
+          <product>SHC - SAP LBN 2.0</product>
+          <projectToken>${whitesource.projectToken}</projectToken>
+          <autoDetectProxySettings>true</autoDetectProxySettings>
+          <forceUpdate>true</forceUpdate>
+          <failOnError>true</failOnError>
+        </configuration>
+      </plugin>
+      
+    </plugins>
+  </build>
+</project>
+
