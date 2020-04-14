@@ -5,7 +5,7 @@
 	<ns0:whitesource.projectToken>52e9673879ee465abecc87340626a97dea5b342a5de24b6aacf83efec7b2caad</ns0:whitesource.projectToken>
 	<ns0:vulas.ppms.component>SAP LBN 2.0</ns0:vulas.ppms.component>
         <ns0:vulas.ppms.objno.scv>73555000100200011747</ns0:vulas.ppms.objno.scv>
-	<ns0:sharedLIB.version>[2.4.0, 2.5.0)</ns0:sharedLIB.version>
+	<ns0:sharedLIB.version>[2.4.0, 2.6.0)</ns0:sharedLIB.version>
   </ns0:properties>
 
   <ns0:parent>
