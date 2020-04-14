@@ -1,57 +1,57 @@
-<ns0:project xmlns:ns0="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <ns0:modelVersion>4.0.0</ns0:modelVersion>
-  <ns0:properties>
-  	<ns0:maven-jar-plugin.version>3.1.1</ns0:maven-jar-plugin.version>
-	<ns0:whitesource.projectToken>52e9673879ee465abecc87340626a97dea5b342a5de24b6aacf83efec7b2caad</ns0:whitesource.projectToken>
-	<ns0:vulas.ppms.component>SAP LBN 2.0</ns0:vulas.ppms.component>
-        <ns0:vulas.ppms.objno.scv>73555000100200011747</ns0:vulas.ppms.objno.scv>
-	<ns0:sharedLIB.version>[2.4.0, 2.6.0)</ns0:sharedLIB.version>
-  </ns0:properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <properties>
+  	<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+	<whitesource.projectToken>52e9673879ee465abecc87340626a97dea5b342a5de24b6aacf83efec7b2caad</whitesource.projectToken>
+	<vulas.ppms.component>SAP LBN 2.0</vulas.ppms.component>
+        <vulas.ppms.objno.scv>73555000100200011747</vulas.ppms.objno.scv>
+	<sharedLIB.version>[2.4.0, 2.6.0)</sharedLIB.version>
+  </properties>
 
-  <ns0:parent>
-    <ns0:groupId>com.sap.gtt.v2</ns0:groupId>
-    <ns0:artifactId>gtt-v2-parent-pom</ns0:artifactId>
-    <ns0:version>[2.3.0,3.0.0)</ns0:version>
-  </ns0:parent>
+  <parent>
+    <groupId>com.sap.gtt.v2</groupId>
+    <artifactId>gtt-v2-parent-pom</artifactId>
+    <version>[2.3.0,3.0.0)</version>
+  </parent>
 
-  <ns0:artifactId>gtt-v2-core-metadata-service</ns0:artifactId>
-  <ns0:packaging>jar</ns0:packaging>
-  <ns0:name>gtt-v2-core-metadata-service</ns0:name>
-  <ns0:version>2.3.0</ns0:version>
+  <artifactId>gtt-v2-core-metadata-service</artifactId>
+  <packaging>jar</packaging>
+  <name>gtt-v2-core-metadata-service</name>
+  <version>2.3.0</version>
   
-  <ns0:dependencies>
-    <ns0:dependency>
-      <ns0:groupId>com.sap.gtt.v2</ns0:groupId>
-      <ns0:artifactId>gtt-v2-shared-library</ns0:artifactId>
-      <ns0:version>${sharedLIB.version}</ns0:version>
-    </ns0:dependency>
-    <ns0:dependency>
-      <ns0:groupId>org.springframework.boot</ns0:groupId>
-      <ns0:artifactId>spring-boot-starter-web</ns0:artifactId>
-    </ns0:dependency>
+  <dependencies>
+    <dependency>
+      <groupId>com.sap.gtt.v2</groupId>
+      <artifactId>gtt-v2-shared-library</artifactId>
+      <version>${sharedLIB.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
     
-  </ns0:dependencies>
-  <ns0:build>
-    <ns0:plugins>
-      <ns0:plugin>
-        <ns0:groupId>org.springframework.boot</ns0:groupId>
-        <ns0:artifactId>spring-boot-maven-plugin</ns0:artifactId>
-      </ns0:plugin>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
       
-      <ns0:plugin>
-        <ns0:groupId>org.whitesource</ns0:groupId>
-        <ns0:artifactId>whitesource-maven-plugin</ns0:artifactId>
-        <ns0:version>19.5.1</ns0:version>
-        <ns0:configuration>
-          <ns0:orgToken>b39d1328-52e2-42e3-98f0-932709daf3f0</ns0:orgToken>
-          <ns0:product>SHC - SAP LBN 2.0</ns0:product>
-          <ns0:projectToken>${whitesource.projectToken}</ns0:projectToken>
-          <ns0:autoDetectProxySettings>true</ns0:autoDetectProxySettings>
-          <ns0:forceUpdate>true</ns0:forceUpdate>
-          <ns0:failOnError>true</ns0:failOnError>
-        </ns0:configuration>
-      </ns0:plugin>
+      <plugin>
+        <groupId>org.whitesource</groupId>
+        <artifactId>whitesource-maven-plugin</artifactId>
+        <version>19.5.1</version>
+        <configuration>
+          <orgToken>b39d1328-52e2-42e3-98f0-932709daf3f0</orgToken>
+          <product>SHC - SAP LBN 2.0</product>
+          <projectToken>${whitesource.projectToken}</projectToken>
+          <autoDetectProxySettings>true</autoDetectProxySettings>
+          <forceUpdate>true</forceUpdate>
+          <failOnError>true</failOnError>
+        </configuration>
+      </plugin>
       
-    </ns0:plugins>
-  </ns0:build>
-</ns0:project>
+    </plugins>
+  </build>
+</project>
